@@ -1,5 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
+import { PAGES } from "@/config/pages.config"
+import { Menu } from "./Menu"
 
 export function Header() {
     return <header className="border-b border-white/10 px-6 py-4 flex items-center justify-between bg-black">
@@ -15,10 +17,6 @@ export function Header() {
                 priority
             />
         </Link>
-        <nav className="flex gap-6 text-sm text-white/80">
-        <Link href='/'>Home</Link>
-        <Link href='/'>Explore</Link>
-        <Link href='/'>Profile</Link>
-        </nav>
+        <Menu></Menu>
     </header>
 }
